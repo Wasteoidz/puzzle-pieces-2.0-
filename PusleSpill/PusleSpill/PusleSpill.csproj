@@ -57,9 +57,49 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Resources\Images\Puzzles\biler\**" />
+	  <AndroidResource Remove="Resources\Images\Puzzles\bluey\**" />
+	  <Compile Remove="Resources\Images\Puzzles\biler\**" />
+	  <Compile Remove="Resources\Images\Puzzles\bluey\**" />
+	  <EmbeddedResource Remove="Resources\Images\Puzzles\biler\**" />
+	  <EmbeddedResource Remove="Resources\Images\Puzzles\bluey\**" />
+	  <MauiCss Remove="Resources\Images\Puzzles\biler\**" />
+	  <MauiCss Remove="Resources\Images\Puzzles\bluey\**" />
+	  <MauiImage Remove="Resources\Images\Puzzles\biler\**" />
+	  <MauiImage Remove="Resources\Images\Puzzles\bluey\**" />
+	  <MauiXaml Remove="Resources\Images\Puzzles\biler\**" />
+	  <MauiXaml Remove="Resources\Images\Puzzles\bluey\**" />
+	  <None Remove="Resources\Images\Puzzles\biler\**" />
+	  <None Remove="Resources\Images\Puzzles\bluey\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Puzzles\Divergence.jpg" />
+	  <None Remove="Resources\Images\Puzzles\holyCow.jpg" />
+	  <None Remove="Resources\Images\Puzzles\MadCow.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Puzzles\divergence.jpg" />
+	  <MauiImage Include="Resources\Images\Puzzles\holycow.jpg" />
+	  <MauiImage Include="Resources\Images\Puzzles\madcow.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Essentials" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+		<PackageReference Include="SkiaSharp" Version="3.119.1" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="3.119.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VictoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
